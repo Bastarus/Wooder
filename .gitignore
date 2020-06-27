@@ -1,0 +1,9 @@
+gulpfile.js
+package.json
+package-lock.json
+dist/**/*
+/node_modules/**/*
+/app/css/**/*
+/app/imgSrc/**/*
+/app/**/*.html
+/**/*.min.*
