@@ -1,4 +1,4 @@
-doctype <!DOCTYPE html>
+doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
@@ -16,73 +16,82 @@ html(lang="en")
                                     div
                                     p MENU
                             .header-menu__item.header-menu__item_pos_center
-                                .logo WOODER
+                                .logo.mobile W
+                                    span.logo_decor OO
+                                    span DER
                                 ul.header-menu__list
+                                    li.logo.desktop W
+                                        span.logo_decor OO
+                                        span DER
                                     li HOME
                                     li PRODUCTS
                                     li ABOUT
                             .header-menu__item.header-menu__item_pos_right
                                 .header__img
-                                    img(src="/img/icons/info.png", alt="Info")
+                                    img(src="/img/icons/info.png", alt="Info", width="23px")
                                 .select-language EN    
                 .header__wrapper_main
                     .header-main
-                        .header-numbers
+                        .header-numbers.desktop
                             p.header-numbers__item.text_vertical.text_color_yellow 01  
                             .header-numbers__links
-                                 .header-numbers__link_active
+                                 .header-numbers__link.header-numbers__link_active
                                  .header-numbers__link
                                  .header-numbers__link
                                  .header-numbers__link
                         .header-info
                             h1.header-title.text_color_yellow WOODER
-                            a.btn.header-btn(href="#") 
+                            a.btn.btn-header(href="#") 
                                 p.text_small LEARN MORE
-                                img(src="/img/icons/arrow-right.png", alt="Arrow right")
-                            .scroll
+                                img(src="/img/icons/arrow_right.png", alt="Arrow right")
+                            .scroll.desktop
                                 div
-                                    img(src="/img/icons/mouse.png", alt="Mouse") 
+                                    img(src="/img/icons/mouse.png", alt="Mouse", width="20px") 
                                 div
-                                    img(src="/img/icons/arrow-down.png", alt="Arrow down")  
-                                p.text_vertical.text_small.text_color_yellow SCROLL  
-                            p.text_vertical.text_color_yellow FURNITURE & DECOR               
+                                    img(src="/img/icons/arrow_down.png", alt="Arrow down")  
+                                p.text_vertical.text_small.text_transparent.text_color_yellow SCROLL  
+                        p.text_vertical.text_color_yellow.text_transparent.desktop FURNITURE & DECOR               
                 .header-absolute.header-absolute_pos_right.text_color_yellow W
                 .header-absolute.header-absolute_pos_bottom.text_color_yellow F
                 .header-absolute.header-absolute_pos_bottom-right 
-                    img(src="/img/icons/share.png", alt="Share")
+                    img(src="/img/icons/share.png", alt="Share", width="25px")
         main
             section
                 .section
                     .section-wrapper
-                        .section-content
-                            .section-row.section-row_justify_end
+                        .section-content.section-content_wLine.section-content_wLine_left
+                            .section-row.section-row_justify_start
                                 .section-row__item
                                     .section-info
-                                        .section-title.section-title_wLine.text_align_left
+                                        .section-title.section-title_wLine.section-title_wLine_left
                                             h2 FURNITURE
-                                        .section-text.section-text_wLine.section-text_wLine_left.text_align_left
+                                        .section-text.section-text_wLine.section-text_wLine_left
                                             p 
                                                 |Wooder utilizes materials otherwise left behind, 
                                                 |rendered useless in their original intent. 
                                                 |By creating new pieces made of reclaimed barnwood    
                                         .section-link
                                             a.text_small(href="#") LEARN MORE
+                                            img(src="/img/icons/arrow_right.png", alt="")
+                                .section-row__item_margin            
                                 .section-row__item            
                                     .section-img.section-img_shadow
                                         img(src="/img/furniture.png", alt="Furniture")
-                            .section-number.section-absolute 01.
-                            .section-absolute.section-absolute_pos_left FURNITURE        
+                            .section-number.section-number_pos_left.section-absolute.desktop 01
+                                span.text_color_yellow .
+                    .section-absolute.section-absolute__text.section-absolute_pos_right.text_transparent.desktop FURNITURE        
             section
                 .section
                     .section-wrapper
-                        .section-content
-                            .section-row.section-row_justify_start
+                        .section-content.section-content_wLine.section-content_wLine_right
+                            .section-row.section-row_justify_end
                                 .section-row__item
                                     .section-img.section-img_shadow
                                         img(src="/img/decor.png", alt="Decor")
+                                .section-row__item_margin        
                                 .section-row__item        
                                     .section-info
-                                        .section-title.section-title_wLine.text_align_right
+                                        .section-title.section-title_wLine.section-title_wLine_right
                                             h2 DECOR
                                         .section-text.section-text_wLine.section-text_wLine_right.text_align_right
                                             p 
@@ -91,42 +100,52 @@ html(lang="en")
                                                 |which is suitable your premises.     
                                         .section-link
                                             a.text_small(href="#") LEARN MORE
-                            .section-number.section-absolute 02.
-                            .section-absolute.section-absolute_pos_right DECOR 
+                                            img(src="/img/icons/arrow_right.png", alt="")
+                            .section-number.section-number_pos_right.section-absolute.desktop 02
+                                span.text_color_yellow .
+                    .section-absolute.section-absolute__text.section-absolute_pos_left.text_transparent.desktop DECOR 
             section
                 .section
                     .section-wrapper
                         .section-content
                             .section-column
-                                .section-info
-                                    .section-title.text_align_center
-                                        h2 WOODER - IS QUALITY
-                                    .section-text.section-text_wLine.section-text_wLine_top
-                                        p 
-                                            |We create unique design objects made of rare wood, 
-                                            |specially under the order. Look at the short video about our work. 
-                                .section-row.section-row_justify_between
-                                    .section-row__item
-                                        .advantage-block
-                                            .advantage-block__video
-                                                .advantage-block__img
-                                                    img(src="/img/innovative-design.png", alt="Innovative Design")
-                                                .play
-                                            h3.advantage-block__title.section-subtitle Innovative Design 
-                                    .section-row__item
-                                        .advantage-block
-                                            .advantage-block__video
-                                                .advantage-block__img
-                                                    img(src="/img/high-level-skills.png", alt="High-level Skills")
-                                                .play
-                                            h3.advantage-block__title.section-subtitle High-level Skills
-                                    .section-row__item
-                                        .advantage-block
-                                            .advantage-block__video
-                                                .advantage-block__img
-                                                    img(src="/img/quality-products.png", alt="Quality Products")
-                                                .play
-                                            h3.advantage-block__title.section-subtitle Quality Products                    
+                                .section-column__item
+                                    .section-info
+                                        .section-title.text_align_center
+                                            h2 WOODER - IS QUALITY
+                                        .section-text.section-text_wLine.section-text_wLine_top
+                                            p 
+                                                |We create unique design objects made of rare wood, 
+                                                |specially under the order. Look at the short video about our work. 
+                                .section-column__item
+                                    .section-row.section-row_justify_between
+                                        .section-row__item.section-row__item_width
+                                            .advantage-block
+                                                .advantage-block__video
+                                                    .advantage-block__img
+                                                        img(src="/img/innovative-design.png", alt="Innovative Design")
+                                                    .play
+                                                        img(src="/img/icons/play.png", alt="Play", width="40%")
+                                                .section-text.section-text_wLine.section-text_wLine_top        
+                                                    p.advantage-block__title.section-subtitle Innovative Design 
+                                        .section-row__item.section-row__item_width
+                                            .advantage-block
+                                                .advantage-block__video
+                                                    .advantage-block__img
+                                                        img(src="/img/high-level-skills.png", alt="High-level Skills")
+                                                    .play
+                                                        img(src="/img/icons/play.png", alt="Play", width="40%")
+                                                .section-text.section-text_wLine.section-text_wLine_top        
+                                                    p.advantage-block__title.section-subtitle High-level Skills
+                                        .section-row__item.section-row__item_width
+                                            .advantage-block
+                                                .advantage-block__video
+                                                    .advantage-block__img
+                                                        img(src="/img/quality-products.png", alt="Quality Products")
+                                                    .play
+                                                        img(src="/img/icons/play.png", alt="Play", width="40%")
+                                                .section-text.section-text_wLine.section-text_wLine_top        
+                                                    p.advantage-block__title.section-subtitle Quality Products                    
             section
                 .section.section_bg_black
                     .section-wrapper.section-wrapper_size_big
@@ -135,9 +154,9 @@ html(lang="en")
                                 .section-row
                                     .section-row__item
                                         .section-info
-                                            .section-title.section-title_wLine.text_align_left
-                                                h2 WE Do THE DESIGN OF ANY COMPLEXITY
-                                            .section-text.section-text_wLine.section-text_wLine_left.text_align_left
+                                            .section-title.section-title_wLine.section-title_wLine_left.section-title_wLine_white.text_color_yellow
+                                                h2 WE DO THE DESIGN OF ANY COMPLEXITY
+                                            .section-text.section-text_wLine.section-text_wLine_left.text_color_white
                                                 p 
                                                     |This is a team of professionals that make the furniture and 
                                                     |wood décor high standard. Creating modern designs. 
@@ -145,31 +164,35 @@ html(lang="en")
                                                     |doing work with love.    
                                             a.btn.section-btn(href="#") 
                                                 img(src="/img/icons/watch.png", alt="Watch")
-                                                p.text_small WATCH VIDEO
-                                    .section-row__item  
+                                                p.text_small.text_color_white WATCH VIDEO
+                                    .section-row__item.section-row__item_width_half  
                             .section-absolute.section-absolute_watch
-                                img(src="/img/icons/watch.png", alt="Watch")                
+                                img(src="/img/icons/player.png", alt="Watch")                
             section
                 .section
                     .section-wrapper  
                         .section-content
-                            .section-row.section-row_justify_start
+                            .section-row.section-row_justify_start.section-row_wPadding
                                 .section-row__item
                                     .section-img.section-img_shadow
                                         img(src="/img/about.png", alt="Our team")
+                                .section-row__item_margin        
                                 .section-row__item        
                                     .section-info
-                                        .section-title.section-title_wLine.text_align_left
+                                        .section-title.section-title_wLine.section-title_wLine_left
                                             h2 ABOUT US
                                         .section-text.section-text_wLine.section-text_wLine_left.text_align_left
                                             p 
                                                 |We are a team of professionals in the wood processing 
                                                 |and the creation of wooden furniture of the highest class     
                                         .section-link
-                                            a.text_small(href="#") LEARN MORE                                  
+                                            a.text_small(href="#") LEARN MORE   
+                                            img(src="/img/icons/arrow_right.png", alt="")                               
         footer
             .footer
                 p.text_color_gray © 2016 WOODER
-                .logo WOODER
+                .logo W
+                    span.logo_decor OO
+                    span DER
                 p.text_color_gray 
                     a(href="#") Designed by Viacheslav Olianishyn
