@@ -46,6 +46,9 @@ body {
     }
     &_vertical {
         writing-mode: vertical-lr;
+        @media (max-width: 1200px) {
+            writing-mode: horizontal-tb;;
+        }
     }
     &_transparent {
         opacity: 0.2;
@@ -91,10 +94,17 @@ body {
     &-main {
         flex-grow: 1;
         @extend %flex-row-between;
+        @media (max-width: 1200px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
     }
     &-info {
         @include flex-column(flex-start, center);
         height: 100%;
+        @media (max-width: 1200px) {
+            height: auto;
+        }
     }
     &-title {
         @include font-size(100rem);
@@ -140,6 +150,9 @@ body {
     }
     &-numbers {
         @include font-size(52rem);  
+        @media (max-width: 1200px) {
+            display: flex;
+        }
         &>p {
             position: relative;
             &::before {
@@ -151,10 +164,16 @@ body {
                 position: absolute;
                 top: -150%;
                 width: 4px;
+                @media (max-width: 1200px) {
+                    content: none;
+                }
             }
         }
         &__links {
-            @include flex-column(center, stretch)
+            @include flex-column(center, stretch);
+            @media (max-width: 1200px) {
+                flex-direction: row;
+            }
         }
         &__link {
             background-color: $color-gray-dark;
@@ -164,6 +183,9 @@ body {
             width: 10px;
             &_active {
                 background-color: $color-yellow-light;
+            }
+            @media (max-width: 1200px) {
+                margin: 0 0 0 40px;
             }
         }
     }
@@ -213,7 +235,10 @@ body {
     margin-left: 1rem;
 }
 .scroll {
-    @include flex-column(center, space-between)
+    @include flex-column(center, space-between);
+    @media (max-width: 1200px) {
+        display: none;
+    }
 }
 
 .section {
@@ -231,6 +256,9 @@ body {
             &_big {
                 padding: 0 $main-padding-big;
             }
+        }
+        @media (max-width: 1200px) {
+            padding: 0 10%;
         }
     }
     &-content {
