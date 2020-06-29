@@ -111,6 +111,7 @@ body {
         @media (max-width: 1200px) {
             flex-direction: column-reverse;
             justify-content: center;
+            width: 100%;
         }
     }
     &-info {
@@ -118,8 +119,6 @@ body {
         height: 100%;
         @media (max-width: 1200px) {
             height: auto;
-        }
-        @media (max-width: 768px) {
             align-items: center;
         }
     }
@@ -208,27 +207,29 @@ body {
                 }
             }
         }
-        &__links {
+        &__links>ul {
             @include flex-column(center, stretch);
             @media (max-width: 1200px) {
                 flex-direction: row;
+            }
+            &>li {
+                @media (max-width: 1200px) {
+                    margin: 0 0 0 40px;
+                }
             }
         }
         &__link {
             background-color: $color-gray-dark;
             border-radius: 50%;
             height: 10px;
-            margin-top: 40px;
             width: 10px;
             &_active {
                 background-color: $color-yellow-light;
             }
-            @media (max-width: 1200px) {
-                margin: 0 0 0 40px;
-            }
         }
     }
     &-absolute {
+        display: none;
         @include font-size(400rem);
         position: absolute;
         &_pos {
@@ -579,4 +580,26 @@ body {
         flex-direction: column;
         text-align: center;
     }
+}
+
+.slick-slider {
+    width: 70%;
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+}
+.slick-dots button {
+    background: $color-gray-dark;
+    border: none;
+    border-radius: 50%;
+    height: 15px;
+    font-size: 0;
+    width: 15px;
+    outline: none;
+    &::before {
+        content: none;
+    }
+} 
+.slick-dots li[class="slick-active"] button {
+    background: $color-yellow-light;
 }
