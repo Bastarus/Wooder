@@ -33,6 +33,14 @@ body {
 
 .mobile {
     display: none;
+    @media (max-width: 900px) {
+        display: block;
+    }
+}
+.desktop {
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
 
 .text {
@@ -66,6 +74,9 @@ body {
     &-header {
         margin: (60rem / 15) 0;
     }
+    @media (max-width: 400px) {
+        padding: 1rem;
+    }
 }
 
 .header {
@@ -86,6 +97,9 @@ body {
             display: flex;
             flex-grow: 1;
             padding: 0 $main-padding;
+            @media (max-width: 768px) {
+                padding: 0 5%;
+            }
         }
     }
     &-top {
@@ -105,10 +119,21 @@ body {
         @media (max-width: 1200px) {
             height: auto;
         }
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
     &-title {
         @include font-size(100rem);
         letter-spacing: 1.5rem;
+        @media (max-width: 768px) {
+            font-size: 5rem;
+            letter-spacing: normal;
+        }
+        @media (max-width: 400px) {
+            font-size: 3rem;
+            text-align: center;
+        }
     }
     &-menu {
         @extend %flex-row-between;
@@ -117,6 +142,12 @@ body {
             &_pos_center {
                 flex-grow: 1;
                 padding: 0 (367 / 1920 * 100%);
+                @media (max-width: 900px) {
+                    @include flex-column(center, center);
+                }
+                @media (max-width: 400px) {
+                    padding: 0 5%;
+                }
             } 
         }
         &__burger {
@@ -146,6 +177,14 @@ body {
         &__list {
             @extend %flex-row-between;
             flex-grow: 1;
+            &>li {
+                @media (max-width: 900px) {
+                    margin: 0 10px;
+                }
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
     &-numbers {
@@ -261,11 +300,17 @@ body {
             padding: 0 10%;
         }
     }
+    @media (max-width: 900px) {
+        padding: ($section-padding / 2) 0;
+    }
     &-content {
         position: relative;
         &_border_yellow {
             border: 1px solid $color-yellow-light;
             padding: 180px 0;
+            @media (max-width: 900px) {
+                padding: 50px 0;
+            }
         }
         &_wLine {
             &::after {
@@ -275,6 +320,9 @@ body {
                 position: absolute;
                 bottom: -($section-padding);
                 width: 4px;
+                @media (max-width: 900px) {
+                    content: none;
+                }
             }
             &_left::after {
                 left: 45px;
@@ -287,16 +335,27 @@ body {
     &-row {
         align-items: center;
         display: flex;
+        @media (max-width: 900px) {
+            flex-direction: column; 
+        }
         &_justify {
             &_end {
                 justify-content: flex-end;
                 padding-right: 185px;
                 text-align: right;
+                @media (max-width: 900px) {
+                    padding: 0;
+                    text-align: center;
+                }
             }
             &_start {
                 justify-content: flex-start;
                 padding-left: 185px;
                 text-align: left;
+                @media (max-width: 900px) {
+                    padding: 0;
+                    text-align: center;
+                }
             }
             &_between {
                 justify-content: space-between;
@@ -308,13 +367,24 @@ body {
                 &_half {
                     width: 60%;
                 }
+                @media (max-width: 900px) {
+                    width: 100%;
+                }
             }
             &_margin {
                 margin: 0 30px;
+                @media (max-width: 900px) {
+                    margin: 30px 0;
+                }
             }
         }
         &_wPadding {
             padding: 0;
+        }
+        &_reverse {
+            @media (max-width: 900px) {
+                flex-direction: column-reverse;
+            }
         }
     }
     &-column {
@@ -351,6 +421,14 @@ body {
                 }
             }
         }
+        @media (max-width: 900px) {
+            &::before, &::after {
+                content: none;
+            }
+        }
+        @media (max-width: 400px) {
+            font-size: 2rem;
+        }
     }
     &-subtitle {
         @include font-size(16rem);
@@ -370,6 +448,9 @@ body {
                 position: absolute;
                 top: 50%;
                 width: 44px;
+                @media (max-width: 900px) {
+                    content: none;
+            }
             }
             &_left {
                 &>p::before {
@@ -450,6 +531,9 @@ body {
             &>img {
                 height: 100%;
             }
+            @media (max-width: 900px) {
+                display: none;
+            }
         }
     }
 }
@@ -486,4 +570,13 @@ body {
     background-size: cover;
     @include flex-row(space-between);
     padding: 1.5rem $main-padding;
+    &>.logo {
+        @media (max-width: 768px) {
+            margin: 1rem 0;
+        }
+    }
+    @media (max-width: 900px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
